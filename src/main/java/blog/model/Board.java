@@ -44,7 +44,7 @@ public class Board {
 
 	private int count; // 조회수
 
-	@ManyToOne(fetch = FetchType.EAGER) // Many = Board, One = user, 1명의 유저는 여러 개의 게시글을 쓸 수 있음
+	@ManyToOne(fetch = FetchType.EAGER) // Foreign Key, Many = Board, One = user, 1명의 유저는 여러 개의 게시글을 쓸 수 있음
 	@JoinColumn(name = "userId")
 	private User user;
 
